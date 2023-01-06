@@ -4,7 +4,8 @@
             "Backdrop\\Custom\\Portfolio\\": "src/"
         },
         "files": [
-            "src/framework.php"
+            "src/framework.php",
+            "src/functions-update.php"
         ]
     },
     "require": {
