@@ -1,4 +1,3 @@
-
 <?php
 /**
  * Boot the Framework
