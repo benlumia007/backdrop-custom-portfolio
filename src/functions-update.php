@@ -23,7 +23,7 @@
  */
 
 // EDIT: Make this unique. Example: YourDevName\YourPluginName;
-namespace Inheritance;
+namespace Backdrop\Custom\Portfolio;
 
 // EDIT: URL where Update Manager is installed; with trailing slash!
 const UPDATE_SERVER = 'https://updates.luthemes.com';
