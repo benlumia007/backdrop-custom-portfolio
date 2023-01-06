@@ -12,16 +12,16 @@ class Component implements Bootable {
 
 	public function portfolio_labels() {
 		$labels = [
-			'name'               => sprintf( esc_html__( '%s', 					 'backdrop-custom-portfolio' ), 'Portfolios' ),
-			'singular_name'      => sprintf( esc_html__( '%s', 					 'backdrop-custom-portfolio' ), 'Portfolio' ),
-			'name_admin_bar'     => sprintf( esc_html__( '%s', 					 'backdrop-custom-portfolio' ), 'Portfolio' ),
-			'add_new'            => sprintf( esc_html__( 'New %s', 				 'backdrop-custom-portfolio' ), 'Portfolio' ),
-			'add_new_item'       => sprintf( esc_html__( 'Add New %s', 			 'backdrop-custom-portfolio' ), 'Portfolio' ),
-			'edit_item'          => sprintf( esc_html__( 'Edit %s', 			 'backdrop-custom-portfolio' ), 'Portfolio' ),
-			'new_item'           => sprintf( esc_html__( 'New %s', 				 'backdrop-custom-portfolio' ), 'Portfolio' ),
-			'view_item'          => sprintf( esc_html__( 'View %s', 			 'backdrop-custom-portfolio' ), 'Portfolio' ),
-			'search_items'       => sprintf( esc_html__( 'Search %s', 			 'backdrop-custom-portfolio' ), 'Portfolios' ),
-			'not_found'          => sprintf( esc_html__( 'No %s Found', 		 'backdrop-custom-portfolio' ), 'Portfolios' ),
+			'name'               => sprintf( esc_html__( '%s',                   'backdrop-custom-portfolio' ), 'Portfolios' ),
+			'singular_name'      => sprintf( esc_html__( '%s',                   'backdrop-custom-portfolio' ), 'Portfolio' ),
+			'name_admin_bar'     => sprintf( esc_html__( '%s',                   'backdrop-custom-portfolio' ), 'Portfolio' ),
+			'add_new'            => sprintf( esc_html__( 'New %s',               'backdrop-custom-portfolio' ), 'Portfolio' ),
+			'add_new_item'       => sprintf( esc_html__( 'Add New %s',           'backdrop-custom-portfolio' ), 'Portfolio' ),
+			'edit_item'          => sprintf( esc_html__( 'Edit %s',              'backdrop-custom-portfolio' ), 'Portfolio' ),
+			'new_item'           => sprintf( esc_html__( 'New %s',               'backdrop-custom-portfolio' ), 'Portfolio' ),
+			'view_item'          => sprintf( esc_html__( 'View %s',              'backdrop-custom-portfolio' ), 'Portfolio' ),
+			'search_items'       => sprintf( esc_html__( 'Search %s',            'backdrop-custom-portfolio' ), 'Portfolios' ),
+			'not_found'          => sprintf( esc_html__( 'No %s Found',          'backdrop-custom-portfolio' ), 'Portfolios' ),
 			'not_found_in_trash' => sprintf( esc_html__( 'No %s Found in Trash', 'backdrop-custom-portfolio' ), 'Portfolios' ),
 		];
 
