@@ -1,0 +1,14 @@
+{
+    "autoload": {
+        "psr-4": {
+            "Backdrop\\Custom\\Portfolio\\": "src/"
+        },
+        "files": [
+            "src/framework.php"
+        ]
+    },
+    "require": {
+        "php": ">=7.4",
+        "benlumia007/backdrop": "^2.0.0"
+    }
+}
