@@ -2,11 +2,7 @@
     "autoload": {
         "psr-4": {
             "Backdrop\\Custom\\Portfolio\\": "src/"
-        },
-        "files": [
-            "src/framework.php",
-            "src/functions-update.php"
-        ]
+        }
     },
     "require": {
         "php": ">=7.4",

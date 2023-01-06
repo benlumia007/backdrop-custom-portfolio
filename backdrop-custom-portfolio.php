@@ -25,3 +25,6 @@
 if ( file_exists( plugin_dir_path( __FILE__ ) . '/vendor/autoload.php' ) ) {
 	require_once plugin_dir_path( __FILE__ ) . '/vendor/autoload.php';
 }
+
+require_once plugin_dir_path( __FILE__ ) . '/src/framework.php';
+require_once plugin_dir_path( __FILE__ ) . '/src/functions-update.php';
