@@ -107,7 +107,7 @@
 	  * @return void
 	  */
 	 public function __clone() {
-		 _doing_it_wrong( __FUNCTION__, __( 'Whoah, partner!', 'backdrop-custom-portfolio' ), '1.0.0' );
+		 _doing_it_wrong( __FUNCTION__, __( 'Whoa, partner!', 'backdrop-custom-portfolio' ), '1.0.0' );
 	 }
 
 	 /**
@@ -118,7 +118,7 @@
 	  * @return void
 	  */
 	 public function __wakeup() {
-		 _doing_it_wrong( __FUNCTION__, __( 'Whoah, partner!', 'backdrop-custom-portfolio' ), '1.0.0' );
+		 _doing_it_wrong( __FUNCTION__, __( 'Whoa, partner!', 'backdrop-custom-portfolio' ), '1.0.0' );
 	 }
 
 	 /**
@@ -145,31 +145,25 @@
 
 		 $this->dir_path = trailingslashit( plugin_dir_path( __FILE__ ) );
 		 $this->dir_uri  = trailingslashit( plugin_dir_url(  __FILE__ ) );
-
-		 $this->js_uri  = trailingslashit( $this->dir_uri . 'js'  );
-		 $this->css_uri = trailingslashit( $this->dir_uri . 'css' );
 	 }
 
 	 private function includes() {
 
 		 // Load functions files.
-//		 require_once( $this->dir_path . 'inc/functions-capabilities.php' );
-//		 require_once( $this->dir_path . 'inc/functions-filters.php'      );
+		 require_once( $this->dir_path . 'inc/functions-filters.php'      );
 //		 require_once( $this->dir_path . 'inc/functions-options.php'      );
 //		 require_once( $this->dir_path . 'inc/functions-meta.php'         );
 //		 require_once( $this->dir_path . 'inc/functions-rewrite.php'      );
 		 require_once( $this->dir_path . 'inc/functions-post-types.php'   );
 		 require_once( $this->dir_path . 'inc/functions-taxonomies.php'   );
 //		 require_once( $this->dir_path . 'inc/functions-project.php'      );
-//		 require_once( $this->dir_path . 'inc/functions-deprecated.php'   );
 
 		 // Load template files.
 //		 require_once( $this->dir_path . 'inc/template-project.php'  );
-//		 require_once( $this->dir_path . 'inc/template-general.php'  );
+		 require_once( $this->dir_path . 'inc/template-general.php'  );
 
 		 // Load admin files.
 		 if ( is_admin() ) {
-//			 require_once( $this->dir_path . 'admin/butterbean/butterbean.php' );
 			 require_once( $this->dir_path . 'admin/functions-admin.php'       );
 			 require_once( $this->dir_path . 'admin/class-manage-portfolios.php' );
 //			 require_once( $this->dir_path . 'admin/class-project-edit.php'    );
