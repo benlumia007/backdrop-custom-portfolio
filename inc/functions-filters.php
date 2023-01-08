@@ -30,22 +30,22 @@ function bcp_template_include( string $template ): string {
 	$templates = array();
 
 	// Author archive.
-	if ( ccp_is_author() ) {
+	if ( bcp_is_author() ) {
 		$templates[] = 'portfolio-author.php';
 		$templates[] = 'portfolio-archive.php';
 
 		// Category archive.
-	} else if ( ccp_is_category() ) {
+	} else if ( bcp_is_category() ) {
 		$templates[] = 'portfolio-category.php';
 		$templates[] = 'portfolio-archive.php';
 
 		// Tag archive.
-	} else if ( ccp_is_tag() ) {
+	} else if ( bcp_is_tag() ) {
 		$templates[] = 'portfolio-tag.php';
 		$templates[] = 'portfolio-archive.php';
 
 		// Project archive.
-	} else if ( ccp_is_project_archive() ) {
+	} else if ( bcp_is_portfolio_archive() ) {
 		$templates[] = 'portfolio-archive.php';
 
 		// Single project.

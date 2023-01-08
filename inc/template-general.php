@@ -126,7 +126,7 @@ function ccp_is_category( $term = '' ) {
  * @param  mixed  $term
  * @return bool
  */
-function ccp_is_tag( $term = '' ) {
+function bcp_is_tag( mixed $term = '' ): bool {
 
 	return apply_filters( 'ccp_is_tag', is_tax( bcp_get_feature_taxonomy(), $term ) );
 }
@@ -138,7 +138,7 @@ function ccp_is_tag( $term = '' ) {
  * @access public
  * @return bool
  */
-function ccp_is_project_archive() {
+function bcp_is_project_archive() {
 
 	return apply_filters( 'ccp_is_project_archive', is_post_type_archive( bcp_get_portfolio_post_type() ) && ! ccp_is_author() );
 }
