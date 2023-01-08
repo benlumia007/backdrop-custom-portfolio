@@ -65,7 +65,7 @@
 	  * @access public
 	  * @return object
 	  */
-	 public static function get_instance() {
+	 public static function get_instance(): object {
 
 		 static $instance = null;
 
@@ -87,6 +87,7 @@
 	  * @return void
 	  */
 	 private function __construct() {}
+
 	 /**
 	  * Magic method to output a string if trying to use the object as a string.
 	  *
@@ -140,7 +141,7 @@
 	  * @access private
 	  * @return void
 	  */
-	 private function setup() {
+	 private function setup(): void {
 
 		 $this->dir_path = trailingslashit( plugin_dir_path( __FILE__ ) );
 		 $this->dir_uri  = trailingslashit( plugin_dir_url(  __FILE__ ) );
@@ -183,7 +184,7 @@
 	  * @access private
 	  * @return void
 	  */
-	 private function setup_actions() {
+	 private function setup_actions(): void {
 
 		 // Internationalize the text strings used.
 		 add_action( 'plugins_loaded', array( $this, 'i18n' ), 2 );
@@ -199,7 +200,7 @@
 	  * @access public
 	  * @return void
 	  */
-	 public function i18n() {
+	 public function i18n(): void {
 
 		 load_plugin_textdomain( 'backdrop-custom-portfolio', false, trailingslashit( dirname( plugin_basename( __FILE__ ) ) ) . 'lang' );
 	 }
@@ -212,7 +213,7 @@
 	  * @global $wpdb
 	  * @return void
 	  */
-	 public function activation() {
+	 public function activation(): void {
 
 		 // Temp. code to make sure post types and taxonomies are correct.
 		 global $wpdb;
@@ -220,42 +221,6 @@
 		 $wpdb->query( "UPDATE {$wpdb->posts}         SET post_type = 'portfolio_project'  WHERE post_type = 'portfolio_item'"     );
 		 $wpdb->query( "UPDATE {$wpdb->postmeta}      SET meta_key  = 'url'                WHERE meta_key  = 'portfolio_item_url'" );
 		 $wpdb->query( "UPDATE {$wpdb->term_taxonomy} SET taxonomy  = 'portfolio_category' WHERE taxonomy  = 'portfolio'"          );
-
-		 // Get the administrator role.
-		 $role = get_role( 'administrator' );
-
-		 // If the administrator role exists, add required capabilities for the plugin.
-		 if ( ! is_null( $role ) ) {
-
-			 // Remove old caps.
-			 $role->remove_cap( 'manage_portfolio'       );
-			 $role->remove_cap( 'create_portfolio_items' );
-			 $role->remove_cap( 'edit_portfolio_items'   );
-
-			 // Taxonomy caps.
-			 $role->add_cap( 'manage_portfolio_categories' );
-			 $role->add_cap( 'edit_portfolio_categories'   );
-			 $role->add_cap( 'delete_portfolio_categories' );
-			 $role->add_cap( 'assign_portfolio_categories' );
-
-			 $role->add_cap( 'manage_portfolio_tags'       );
-			 $role->add_cap( 'edit_portfolio_tags'         );
-			 $role->add_cap( 'delete_portfolio_tags'       );
-			 $role->add_cap( 'assign_portfolio_tags'       );
-
-			 // Post type caps.
-			 $role->add_cap( 'create_portfolio_projects'           );
-			 $role->add_cap( 'edit_portfolio_projects'             );
-			 $role->add_cap( 'edit_others_portfolio_projects'      );
-			 $role->add_cap( 'publish_portfolio_projects'          );
-			 $role->add_cap( 'read_private_portfolio_projects'     );
-			 $role->add_cap( 'delete_portfolio_projects'           );
-			 $role->add_cap( 'delete_private_portfolio_projects'   );
-			 $role->add_cap( 'delete_published_portfolio_projects' );
-			 $role->add_cap( 'delete_others_portfolio_projects'    );
-			 $role->add_cap( 'edit_private_portfolio_projects'     );
-			 $role->add_cap( 'edit_published_portfolio_projects'   );
-		 }
 	 }
  }
 
