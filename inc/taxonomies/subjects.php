@@ -29,7 +29,7 @@ function bcp_register_subject_taxonomy(): void {
 		'show_tagcloud'     => true,
 		'show_admin_column' => true,
 		'hierarchical'      => false,
-		'query_var'         => bcp_get_subject_taxonomy(),
+		'query_var'         => bcp_get_subjects_taxonomy(),
 		'labels'            => ccp_get_tag_labels(),
 
 		// The rewrite handles the URL structure.
@@ -42,5 +42,5 @@ function bcp_register_subject_taxonomy(): void {
 	);
 
 	// Register the taxonomies.
-	register_taxonomy( bcp_get_subject_taxonomy(),      ccp_get_project_post_type(), apply_filters( 'ccp_tag_taxonomy_args',      $tag_args ) );
+	register_taxonomy( bcp_get_subjects_taxonomy(),      ccp_get_project_post_type(), apply_filters( 'ccp_tag_taxonomy_args',      $tag_args ) );
 }

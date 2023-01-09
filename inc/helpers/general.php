@@ -46,6 +46,18 @@ function bcp_get_layouts_taxonomy(): string {
 	return apply_filters( 'bcp/get/layouts/taxonomy', 'portfolio-layouts' );
 }
 
+/**
+ * Returns the name of the portfolio tag taxonomy.
+ *
+ * @since  1.0.0
+ * @access public
+ * @return string
+ */
+function bcp_get_subjects_taxonomy(): string {
+
+	return apply_filters( 'bcp/get/post/type/portfolio/layouts/taxonomy', 'portfolio-layouts' );
+}
+
 
 
 /**

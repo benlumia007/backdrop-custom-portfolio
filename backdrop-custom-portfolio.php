@@ -106,7 +106,7 @@
 		 }, [
 			 'features',
 			 'layouts',
-//			 'subject'
+			 'subjects'
 		 ] );
 
 		 // Load functions files.
