@@ -69,7 +69,7 @@ final class CCP_Manage_Projects {
 
 		$new_columns = array(
 			'cb'    => $columns['cb'],
-			'title' => __( 'Project', 'custom-content-portfolio' )
+			'title' => __( 'Portfolio', 'custom-content-portfolio' )
 		);
 
 		if ( current_theme_supports( 'post-thumbnails' ) )
