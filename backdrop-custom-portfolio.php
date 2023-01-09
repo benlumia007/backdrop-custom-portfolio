@@ -85,12 +85,35 @@
 	  */
 	 private function includes(): void {
 
+		 // Load helper files.
+		 array_map( function( $file ) {
+			 require_once $this->dir_path . "inc/helpers/$file.php";
+		 }, [
+			 'general',
+			 'rewrite'
+		 ] );
+
+		 // Load post type
+		 array_map( function( $file ) {
+			 require_once $this->dir_path . "inc/post-type/$file.php";
+		 }, [
+			 'backdrop-portfolio'
+		 ] );
+
+		 // Load post type taxonomies
+		 array_map( function( $file ) {
+			 require_once $this->dir_path . "inc/taxonomies/$file.php";
+		 }, [
+			 'features',
+			 'layouts',
+//			 'subject'
+		 ] );
+
 		 // Load functions files.
 //		 require_once( $this->dir_path . 'inc/functions-filters.php'      );
-		 require_once( $this->dir_path . 'inc/functions-options.php'      );
+//		 require_once( $this->dir_path . 'inc/functions-options.php'      );
 //		 require_once( $this->dir_path . 'inc/functions-meta.php'         );
-		 require_once( $this->dir_path . 'inc/functions-post-types.php'   );
-		 require_once( $this->dir_path . 'inc/functions-rewrite.php'      );
+//		 require_once( $this->dir_path . 'inc/functions-rewrite.php'      );
 //		 require_once( $this->dir_path . 'inc/functions-taxonomies.php'   );
 //		 require_once( $this->dir_path . 'inc/functions-project.php'      );
 
